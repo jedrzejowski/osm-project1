@@ -51,5 +51,14 @@ public class Patient {
     public void setInsuranceType(InsuranceType insuranceType) {
         this.insuranceType = insuranceType;
     }
+
+    public enum Sex {
+        MALE, FEMALE
+    }
+
+    public enum InsuranceType {
+        NFZ, PRIVATE, NONE
+    }
+
 }
 
