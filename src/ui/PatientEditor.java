@@ -13,15 +13,12 @@ public class PatientEditor extends JPanel {
     PropEditor.Select insuranceField;
 
     public PatientEditor() {
-        setBorder(BorderFactory.createTitledBorder("Dane pacjenta"));
-
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-
         initCompoments();
     }
 
     private void initCompoments() {
-
+        setBorder(BorderFactory.createTitledBorder("Dane pacjenta"));
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         name1Field = new PropEditor.Text("Imię:", new PropEditor.IOnEdit<String>() {
             @Override

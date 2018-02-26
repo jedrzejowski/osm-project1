@@ -9,7 +9,6 @@ public class Patient {
     private InsuranceType insuranceType;
 
     public Patient(){
-
     }
 
     public String getName1() {

@@ -1,13 +1,16 @@
 import ui.DataRowEditor;
 import ui.PatientEditor;
+import ui.PatientListViewer;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrameMain extends JFrame {
 
     private DataRowEditor dataRowEditor;
+    private PatientListViewer patientListViewer;
     private JMenuBar menuBar;
 
     public FrameMain(){
@@ -17,10 +20,20 @@ public class FrameMain extends JFrame {
         this.setSize(800,600);
 
 
-        dataRowEditor = new DataRowEditor();
-        add(dataRowEditor);
 
         initMenuBar();
+        initCompoments();
+    }
+
+    private void initCompoments(){
+
+
+        dataRowEditor = new DataRowEditor();
+        add(dataRowEditor, BorderLayout.LINE_START);
+
+        patientListViewer = new PatientListViewer();
+        add(patientListViewer, BorderLayout.CENTER);
+
     }
 
     private void initMenuBar(){

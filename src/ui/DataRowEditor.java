@@ -3,6 +3,7 @@ package ui;
 import db.Examination;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class DataRowEditor extends JPanel {
 
@@ -11,12 +12,18 @@ public class DataRowEditor extends JPanel {
 
     public DataRowEditor(){
         super();
+
+        initCompoments();
+    }
+
+    private void initCompoments() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         patientEditor = new PatientEditor();
-        examinationEditor = new ExaminationEditor();
-
         add(patientEditor);
+
+
+        examinationEditor = new ExaminationEditor();
         add(examinationEditor);
     }
 }
