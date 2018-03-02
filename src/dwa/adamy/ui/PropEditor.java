@@ -1,6 +1,7 @@
 package dwa.adamy.ui;
 
 import com.toedter.calendar.JDateChooser;
+import dwa.adamy.Log;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -15,6 +16,8 @@ public abstract class PropEditor extends JPanel {
 
     private final static Dimension labelDim = new Dimension(100, 25);
     private final static Dimension fieldDim = new Dimension(180, 20);
+
+    private WarnLvl warnLvl;
 
     PropEditor(String title) {
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
@@ -46,6 +49,22 @@ public abstract class PropEditor extends JPanel {
 
     public interface IOnSelect<T> extends IOnEdit<T> {
         Map<T, String> getMap();
+    }
+
+    public WarnLvl getWarnLvl() {
+        return warnLvl;
+    }
+
+    public void setWarnLvl(WarnLvl warnLvl) {
+        this.warnLvl = warnLvl;
+        updateWarnLvl();
+    }
+
+    protected void updateWarnLvl() {
+    }
+
+    public enum WarnLvl {
+        OK, GOOD, WARN, ERROR
     }
 
 
@@ -86,6 +105,29 @@ public abstract class PropEditor extends JPanel {
         public void refreshData() {
             field.setText(callback.get());
         }
+
+        @Override
+        protected void updateWarnLvl() {
+            Color color = UIManager.getColor("TextField.background");
+
+            switch (getWarnLvl()) {
+                case ERROR:
+                    color = new Color(254, 204, 205);
+                    break;
+
+                case WARN:
+                    color = new Color(255, 234, 168);
+                    break;
+
+                case GOOD:
+                    color = new Color(188, 245, 188);
+                    break;
+            }
+
+            field.setBackground(color);
+        }
+
+
     }
 
     static public class Select<T> extends PropEditor {

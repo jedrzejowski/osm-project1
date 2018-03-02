@@ -48,6 +48,9 @@ public class ExaminationEditor extends JBorderedPanel {
             @Override
             public boolean set(String newValue) {
                 examinationClone.setErythrocytes(newValue);
+
+                WarnLvlParse(erythrocytesField, newValue, 4.5, 6, 3, 7.5);
+
                 setSpecialMark(true);
                 return true;
             }
@@ -62,6 +65,9 @@ public class ExaminationEditor extends JBorderedPanel {
             @Override
             public boolean set(String newValue) {
                 examinationClone.setLeukocytes(newValue);
+
+                WarnLvlParse(leukocytesField, newValue, 4, 10, 0, 14);
+
                 setSpecialMark(true);
                 return true;
             }
@@ -76,6 +82,9 @@ public class ExaminationEditor extends JBorderedPanel {
             @Override
             public boolean set(String newValue) {
                 examinationClone.setPlatelets(newValue);
+
+                WarnLvlParse(plateletsField, newValue, 130, 300, 0, 400);
+
                 setSpecialMark(true);
                 return true;
             }
@@ -144,6 +153,23 @@ public class ExaminationEditor extends JBorderedPanel {
         cancelBtn.setEnabled(b);
     }
 
+    static void WarnLvlParse(PropEditor editor, String value, double good1, double good2, double warn1, double warn2){
+
+        if (value.length() > 0) try {
+            double val = Integer.parseInt(value);
+
+            if (good1 < val && val < good2) {
+                editor.setWarnLvl(PropEditor.WarnLvl.GOOD);
+            } else if (warn1 < val && val < warn2) {
+                editor.setWarnLvl(PropEditor.WarnLvl.WARN);
+            } else {
+                editor.setWarnLvl(PropEditor.WarnLvl.ERROR);
+            }
+        } catch (Exception e) {
+            editor.setWarnLvl(PropEditor.WarnLvl.ERROR);
+        }
+        else editor.setWarnLvl(PropEditor.WarnLvl.OK);
+    }
 
     public interface Interface {
         void onSave(Examination examination);

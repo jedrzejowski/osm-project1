@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e762b4ee-88ed-455a-91ae-291eccedf49c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jcalendar_1_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/JBorderedPanel.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="e762b4ee-88ed-455a-91ae-291eccedf49c" name="Default" comment="Dodanie zakr">
+      <change beforePath="" afterPath="$PROJECT_DIR$/LICENCE.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/run.bat" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/osm-project1.iml" afterPath="$PROJECT_DIR$/osm-project1.iml" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/FrameMain.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/FrameMain.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/Log.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/Log.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/db/Patient.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Patient.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" />
       <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientEditor.java" />
       <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,67 +19,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PropEditor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PropEditor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="296">
+              <caret line="124" column="13" lean-forward="false" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#Text#0;class#PropEditor#0" expanded="false" />
-                <element signature="e#2358#2359#0" expanded="true" />
-                <element signature="e#2411#2412#0" expanded="true" />
+                <element signature="e#1319#1320#0" expanded="true" />
+                <element signature="e#1349#1350#0" expanded="true" />
+                <element signature="e#2692#2693#0" expanded="true" />
+                <element signature="e#2745#2746#0" expanded="true" />
                 <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
-                <element signature="e#5925#5926#0" expanded="true" />
-                <element signature="e#5981#5982#0" expanded="true" />
+                <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+                <element signature="class#Date#0;class#PropEditor#0" expanded="false" />
+                <element signature="e#6820#6821#0" expanded="true" />
+                <element signature="e#6876#6877#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExaminationEditor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExaminationEditor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="69" column="53" lean-forward="false" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
+            <state relative-caret-position="225">
+              <caret line="155" column="4" lean-forward="false" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#849#850#0" expanded="true" />
                 <element signature="e#914#915#0" expanded="true" />
                 <element signature="e#1284#1285#0" expanded="true" />
                 <element signature="e#1357#1358#0" expanded="true" />
-                <element signature="e#1734#1735#0" expanded="true" />
-                <element signature="e#1805#1806#0" expanded="true" />
-                <element signature="e#2182#2183#0" expanded="true" />
-                <element signature="e#2252#2253#0" expanded="true" />
-                <element signature="e#2602#2618#0" expanded="false" />
-                <element signature="e#3396#3397#0" expanded="true" />
-                <element signature="e#3437#3438#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Examination.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dwa/adamy/db/Examination.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="54" />
-              <folding>
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-                <element signature="e#849#850#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
-                <element signature="e#934#935#0" expanded="true" />
-                <element signature="e#978#979#0" expanded="true" />
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
-                <element signature="e#1096#1097#0" expanded="true" />
-                <element signature="e#1138#1139#0" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
-                <element signature="e#1250#1251#0" expanded="true" />
+                <element signature="e#1811#1812#0" expanded="true" />
+                <element signature="e#1882#1883#0" expanded="true" />
+                <element signature="e#2332#2333#0" expanded="true" />
+                <element signature="e#2402#2403#0" expanded="true" />
+                <element signature="e#2828#2844#0" expanded="false" />
+                <element signature="e#3622#3623#0" expanded="true" />
+                <element signature="e#3663#3664#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,9 +118,12 @@
         <option value="$PROJECT_DIR$/src/dwa/adamy/FrameMain.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PatientEditor.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/JBorderedPanel.java" />
-        <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" />
+        <option value="$PROJECT_DIR$/LICENCE.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/run.bat" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java" />
+        <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" />
       </list>
     </option>
   </component>
@@ -199,11 +173,6 @@
             <path>
               <item name="osm-project1" type="b2602c69:ProjectViewProjectNode" />
               <item name="osm-project1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="osm-project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="osm-project1" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="osm-project1" type="b2602c69:ProjectViewProjectNode" />
@@ -295,7 +264,7 @@
       <workItem from="1519671018058" duration="6778000" />
       <workItem from="1519929004845" duration="14497000" />
       <workItem from="1519988201874" duration="525000" />
-      <workItem from="1519988748909" duration="4876000" />
+      <workItem from="1519988748909" duration="6976000" />
     </task>
     <task id="LOCAL-00001" summary="PatientEditor: rozpoczęcie">
       <created>1519599230272</created>
@@ -315,11 +284,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39911000" />
+    <option name="totallyTimeSpent" value="42011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-28" width="1366" height="769" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -327,9 +295,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33127573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33074534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18429004" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -388,7 +356,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PatientEditor: rozpoczęcie" />
     <MESSAGE value="Dodanie wielu rzeczy, bo miałem wene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie wielu rzeczy, bo miałem wene" />
+    <MESSAGE value="Dokończenie panelu badań" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dokończenie panelu badań" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -397,42 +366,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#768:1129" expanded="false" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3437#3438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dwa/adamy/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dwa/adamy/FrameMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initMenuBar#0;class#FrameMain#0" expanded="false" />
-            <element signature="e#1299#1300#0" expanded="false" />
-            <element signature="e#1340#1341#0" expanded="false" />
-            <element signature="e#1532#1533#0" expanded="false" />
-            <element signature="e#1580#1581#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/PatientTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
@@ -487,8 +420,8 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#768:1129" expanded="false" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3437#3438#0" expanded="true" />
+            <element signature="e#3622#3623#0" expanded="true" />
+            <element signature="e#3663#3664#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -499,12 +432,15 @@
           <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Text#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#2358#2359#0" expanded="true" />
-            <element signature="e#2411#2412#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+            <element signature="e#2692#2693#0" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
             <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#5925#5926#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#Date#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#6820#6821#0" expanded="true" />
+            <element signature="e#6876#6877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -571,12 +507,15 @@
           <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#Text#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#2358#2359#0" expanded="true" />
-            <element signature="e#2411#2412#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+            <element signature="e#2692#2693#0" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
             <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#5925#5926#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#Date#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#6820#6821#0" expanded="true" />
+            <element signature="e#6876#6877#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -829,22 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#Text#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#2358#2359#0" expanded="true" />
-            <element signature="e#2411#2412#0" expanded="true" />
-            <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#5925#5926#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dwa/adamy/db/Examination.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -868,23 +791,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LICENCE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="69" column="53" lean-forward="false" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
+        <state relative-caret-position="225">
+          <caret line="155" column="4" lean-forward="false" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#849#850#0" expanded="true" />
             <element signature="e#914#915#0" expanded="true" />
             <element signature="e#1284#1285#0" expanded="true" />
             <element signature="e#1357#1358#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1805#1806#0" expanded="true" />
-            <element signature="e#2182#2183#0" expanded="true" />
-            <element signature="e#2252#2253#0" expanded="true" />
-            <element signature="e#2602#2618#0" expanded="false" />
-            <element signature="e#3396#3397#0" expanded="true" />
-            <element signature="e#3437#3438#0" expanded="true" />
+            <element signature="e#1811#1812#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
+            <element signature="e#2332#2333#0" expanded="true" />
+            <element signature="e#2402#2403#0" expanded="true" />
+            <element signature="e#2828#2844#0" expanded="false" />
+            <element signature="e#3622#3623#0" expanded="true" />
+            <element signature="e#3663#3664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="124" column="13" lean-forward="false" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+            <element signature="e#2692#2693#0" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
+            <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#Date#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#6820#6821#0" expanded="true" />
+            <element signature="e#6876#6877#0" expanded="true" />
           </folding>
         </state>
       </provider>
