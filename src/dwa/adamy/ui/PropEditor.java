@@ -1,12 +1,13 @@
 package dwa.adamy.ui;
 
+import com.toedter.calendar.JDateChooser;
+
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -194,4 +195,24 @@ public abstract class PropEditor extends JPanel {
         }
     }
 
+    static public class Date extends PropEditor {
+        JDateChooser calendar;
+        IOnEdit<java.util.Date> callback;
+
+        public Date(String title, IOnEdit<java.util.Date> callback) {
+            super(title);
+            this.callback = callback;
+
+            calendar = new JDateChooser();
+            calendar.addPropertyChangeListener("date", propertyChangeEvent -> callback.set(calendar.getDate()));
+            add(calendar);
+
+            refreshData();
+        }
+
+        @Override
+        public void refreshData() {
+            calendar.setDate(callback.get());
+        }
+    }
 }

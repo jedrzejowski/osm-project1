@@ -1,6 +1,7 @@
 package dwa.adamy.ui;
 
 import dwa.adamy.db.DataRow;
+import dwa.adamy.db.Examination;
 import dwa.adamy.db.Patient;
 
 import javax.swing.*;
@@ -53,11 +54,22 @@ public class DataRowEditor extends JPanel {
                         break;
                 }
 
+                callback.onCancelDataRow();
             }
         });
         add(patientEditor);
 
-        examinationEditor = new ExaminationEditor();
+        examinationEditor = new ExaminationEditor(new ExaminationEditor.Interface() {
+            @Override
+            public void onSave(Examination examination) {
+                dataRow.setExamination(examination);
+            }
+
+            @Override
+            public void onCancel() {
+                callback.onCancelDataRow();
+            }
+        });
         add(examinationEditor);
     }
 
@@ -106,6 +118,8 @@ public class DataRowEditor extends JPanel {
         void onCreatePatient(DataRow dataRow);
 
         void onSaveDataRow(DataRow dataRow);
+
+        void onCancelDataRow();
     }
 
     private enum State {

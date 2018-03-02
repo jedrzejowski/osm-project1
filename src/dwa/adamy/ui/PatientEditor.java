@@ -7,17 +7,18 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PatientEditor extends JPanel {
+public class PatientEditor extends JBorderedPanel {
 
-    PropEditor.Text name1Field, name2Field, peselField;
-    PropEditor.Radio sexField;
-    PropEditor.Select insuranceField;
-    Interface callback;
-    JButton saveBtn, cancelBtn;
+    private PropEditor.Text name1Field, name2Field, peselField;
+    private PropEditor.Radio sexField;
+    private PropEditor.Select insuranceField;
+    private Interface callback;
+    private JButton saveBtn, cancelBtn;
 
-    Patient patientOrginal, patientClone = new Patient();
+    private Patient patientOrginal, patientClone = new Patient();
 
     public PatientEditor(Interface callback) {
+        super("Dane pacjenta");
         this.callback = callback;
 
         initCompoments();
@@ -25,7 +26,6 @@ public class PatientEditor extends JPanel {
     }
 
     private void initCompoments() {
-        setBorder(BorderFactory.createTitledBorder("Dane pacjenta"));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         //region PropEditors
@@ -39,7 +39,8 @@ public class PatientEditor extends JPanel {
             @Override
             public boolean set(String newValue) {
                 patientClone.setName1(newValue);
-                return false;
+                setSpecialMark(true);
+                return true;
             }
         });
 
@@ -65,7 +66,8 @@ public class PatientEditor extends JPanel {
             @Override
             public boolean set(String newValue) {
                 patientClone.setPesel(newValue);
-                return false;
+                setSpecialMark(true);
+                return true;
             }
         });
 
@@ -84,6 +86,7 @@ public class PatientEditor extends JPanel {
             @Override
             public boolean set(Patient.Sex newValue) {
                 patientClone.setSex(newValue);
+                setSpecialMark(true);
                 return true;
             }
         });
@@ -102,6 +105,7 @@ public class PatientEditor extends JPanel {
             @Override
             public boolean set(Patient.InsuranceType newValue) {
                 patientClone.setInsuranceType(newValue);
+                setSpecialMark(true);
                 return true;
             }
         });
@@ -122,6 +126,7 @@ public class PatientEditor extends JPanel {
         saveBtn = new JButton("Zapisz");
         saveBtn.addActionListener(actionEvent -> {
             patientOrginal = new Patient(patientClone);
+            setSpecialMark(false);
             callback.onSave(patientOrginal);
         });
         bottomBox.add(saveBtn);
@@ -129,6 +134,7 @@ public class PatientEditor extends JPanel {
         cancelBtn = new JButton("Anuluj");
         cancelBtn.addActionListener(actionEvent -> {
             setPatient(patientOrginal);
+            setSpecialMark(false);
             callback.onCancel();
         });
         bottomBox.add(cancelBtn);
@@ -136,6 +142,8 @@ public class PatientEditor extends JPanel {
         add(bottomBox);
 
         //endregion
+
+        setSpecialMark(false);
     }
 
     public Patient getPatient() {
@@ -153,6 +161,8 @@ public class PatientEditor extends JPanel {
         peselField.refreshData();
         sexField.refreshData();
         insuranceField.refreshData();
+
+        setSpecialMark(false);
     }
 
     @Override

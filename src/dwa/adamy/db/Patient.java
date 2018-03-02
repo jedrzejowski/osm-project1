@@ -1,7 +1,6 @@
 package dwa.adamy.db;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Patient {
 
@@ -71,9 +70,13 @@ public class Patient {
         return String.format("Patient{%s %s, %s}", getName1(), getName2(), getPesel());
     }
 
+    private static int DebugTestcounter = 0;
+
     public static Patient newTestowy() {
+        DebugTestcounter++;
+
         Patient testowy = new Patient();
-        testowy.setName1("Jan");
+        testowy.setName1("Jan" + DebugTestcounter);
         testowy.setName2("Testowy");
         testowy.setSex(Sex.MALE);
         testowy.setPesel("22222222222");
@@ -83,6 +86,7 @@ public class Patient {
     public enum Sex {
         MALE, FEMALE
     }
+
     static Map<Sex, String> sexMap = null;
 
     public static Map<Sex, String> getSexStringMap() {

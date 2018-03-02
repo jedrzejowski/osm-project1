@@ -93,5 +93,10 @@ public class FrameMain extends JFrame implements PatientListViewer.Interface, Da
         patientListViewer.fireTableDataChanged(true);
     }
 
+    @Override
+    public void onCancelDataRow() {
+        patientListViewer.setEnabled(true);
+    }
+
     //endregion
 }
