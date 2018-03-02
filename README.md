@@ -4,7 +4,7 @@ Pierwszy projekt na **O**programowanie **S**ystemów **M**edycznych
 
 ## Podgląd
 
-## Kompilacja
+![Podgląd](pic/screenshot.png)
 
 ## Autorzy
 

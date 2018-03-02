@@ -54,6 +54,9 @@ public class PatientTable extends JTable {
         return list.get(i);
     }
 
+    public ArrayList<DataRow> getList() {
+        return list;
+    }
 
     private static class PatientTableModel extends AbstractTableModel {
 
@@ -103,14 +106,19 @@ public class PatientTable extends JTable {
                     return dataRow.getPatient().getPesel();
                 case 3:
                     return Patient.getInsuranceTypeStringMap().get(dataRow.getPatient().getInsuranceType());
-
                 case 4:
-                    return "Badanie";
+                    return dataRow.getExamination().getDate() != null;
 
                 default:
                     return "null";
             }
 
+        }
+
+        @Override
+        public Class<?> getColumnClass(int columnIndex) {
+            if (columnIndex == 4) return Boolean.class;
+            return String.class;
         }
     }
 }

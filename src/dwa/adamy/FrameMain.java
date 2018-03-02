@@ -10,50 +10,51 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Klasa zawierająca logikę oddziaływania pomiędzy pomiędzy dwoma panelami
+ * @see dwa.adamy.ui.DataRowEditor panel edycji pojedyńczego wiersza
+ * @see dwa.adamy.ui.PatientListViewer panel trzymający wszsytkie wiersze
+ */
 public class FrameMain extends JFrame implements PatientListViewer.Interface, DataRowEditor.Interface {
 
     private DataRowEditor dataRowEditor;
     private PatientListViewer patientListViewer;
-    private JMenuBar menuBar;
 
     public FrameMain() {
 
-        this.setTitle("Rejestracja wyników badań");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(800, 600);
+        setTitle("Rejestracja wyników badań");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(800, 600);
 
         initMenuBar();
         initCompoments();
     }
 
+    /**
+     * Inicjuje komponenty, czyli prawy panel listy i lewy panel edycji
+     */
     private void initCompoments() {
-
-
         dataRowEditor = new DataRowEditor(this);
         add(dataRowEditor, BorderLayout.LINE_START);
 
         patientListViewer = new PatientListViewer(this);
         add(patientListViewer, BorderLayout.CENTER);
-
     }
 
+    /**
+     * Inicjuje górny pasek menu, zgodnie z wytycznymi projektu
+     */
     private void initMenuBar() {
 
-        menuBar = new JMenuBar();
+        JMenuBar menuBar = new JMenuBar();
 
         JMenu aplikacja = new JMenu("Aplikacja");
 
         JMenuItem zamknij = new JMenuItem("Zamknij");
-        zamknij.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                dispose();
-            }
-        });
+        zamknij.addActionListener(actionEvent -> dispose());
         aplikacja.add(zamknij);
 
         menuBar.add(aplikacja);
-
 
         setJMenuBar(menuBar);
     }
@@ -84,8 +85,22 @@ public class FrameMain extends JFrame implements PatientListViewer.Interface, Da
     //region DataRowEditor
 
     @Override
-    public void onCreatePatient(DataRow dataRow) {
-        patientListViewer.addDataRow(dataRow);
+    public boolean onCreatePatient(DataRow newDataRow) {
+
+        for (DataRow dataRow : patientListViewer.getList()) {
+            if (dataRow.getPatient().getPesel().equals(newDataRow.getPatient().getPesel())){
+
+                JOptionPane.showMessageDialog(this,
+                        "Istnieje już pacjent o takim peselu",
+                        "Uwaga !!!",
+                        JOptionPane.ERROR_MESSAGE);
+
+                return false;
+            }
+        }
+
+        patientListViewer.addDataRow(newDataRow);
+        return true;
     }
 
     @Override

@@ -7,6 +7,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class PatientListViewer extends JPanel {
 
@@ -99,6 +100,10 @@ public class PatientListViewer extends JPanel {
         table.setEnabled(b);
         addBtn.setEnabled(b);
         rmBtn.setEnabled(b);
+    }
+
+    public ArrayList<DataRow> getList() {
+        return table.getList();
     }
 
     public interface Interface {

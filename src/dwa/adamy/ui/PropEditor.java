@@ -60,8 +60,7 @@ public abstract class PropEditor extends JPanel {
         updateWarnLvl();
     }
 
-    protected void updateWarnLvl() {
-    }
+    protected void updateWarnLvl() { }
 
     public enum WarnLvl {
         OK, GOOD, WARN, ERROR
@@ -246,6 +245,9 @@ public abstract class PropEditor extends JPanel {
             this.callback = callback;
 
             calendar = new JDateChooser();
+            calendar.setPreferredSize(fieldDim);
+            calendar.setMinimumSize(fieldDim);
+            calendar.setMaximumSize(fieldDim);
             calendar.addPropertyChangeListener("date", propertyChangeEvent -> callback.set(calendar.getDate()));
             add(calendar);
 

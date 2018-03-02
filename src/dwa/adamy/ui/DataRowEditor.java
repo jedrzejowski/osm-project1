@@ -36,8 +36,9 @@ public class DataRowEditor extends JPanel {
 
                 switch (state) {
                     case CREATING:
-                        callback.onCreatePatient(dataRow);
-                        setEnabled(false);
+                        boolean good = callback.onCreatePatient(dataRow);
+                        if (good) setEnabled(false);
+
                         break;
                     case EDITING:
                         callback.onSaveDataRow(dataRow);
@@ -63,6 +64,7 @@ public class DataRowEditor extends JPanel {
             @Override
             public void onSave(Examination examination) {
                 dataRow.setExamination(examination);
+                callback.onSaveDataRow(dataRow);
             }
 
             @Override
@@ -115,7 +117,7 @@ public class DataRowEditor extends JPanel {
     }
 
     public interface Interface {
-        void onCreatePatient(DataRow dataRow);
+        boolean onCreatePatient(DataRow dataRow);
 
         void onSaveDataRow(DataRow dataRow);
 
