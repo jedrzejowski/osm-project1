@@ -1,4 +1,4 @@
-package db;
+package dwa.adamy.db;
 
 import java.util.Date;
 
