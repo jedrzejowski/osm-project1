@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e762b4ee-88ed-455a-91ae-291eccedf49c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/adam.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/FrameMain.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/FrameMain.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/Log.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/Log.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/Main.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/db/DataRow.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/DataRow.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/db/Patient.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Patient.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientListViewer.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientListViewer.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientTable.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientTable.java" />
       <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,7 +14,49 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PropEditor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+              <folding>
+                <element signature="method#PropEditor#0;class#PropEditor#0" expanded="false" />
+                <element signature="method#setEnabled#0;class#PropEditor#0" expanded="false" />
+                <element signature="class#IOnEdit#0;class#PropEditor#0" expanded="false" />
+                <element signature="docComment;class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+                <element signature="class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+                <element signature="e#1689#1690#0" expanded="true" />
+                <element signature="e#1719#1720#0" expanded="true" />
+                <element signature="e#2615#2616#0" expanded="true" />
+                <element signature="e#2684#2685#0" expanded="true" />
+                <element signature="e#2783#2784#0" expanded="true" />
+                <element signature="e#2852#2853#0" expanded="true" />
+                <element signature="e#2952#2953#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
+                <element signature="e#3154#3155#0" expanded="true" />
+                <element signature="e#3207#3208#0" expanded="true" />
+                <element signature="method#updateWarnLvl#0;class#Text#0;class#PropEditor#0" expanded="false" />
+                <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
+                <element signature="e#5073#5074#0" expanded="true" />
+                <element signature="e#5152#5153#0" expanded="true" />
+                <element signature="e#5424#5425#0" expanded="true" />
+                <element signature="e#5467#5468#0" expanded="true" />
+                <element signature="e#5506#5507#0" expanded="true" />
+                <element signature="e#5549#5550#0" expanded="true" />
+                <element signature="e#5584#5585#0" expanded="true" />
+                <element signature="e#5628#5629#0" expanded="true" />
+                <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+                <element signature="e#6623#6624#0" expanded="true" />
+                <element signature="e#6697#6698#0" expanded="true" />
+                <element signature="e#7382#7383#0" expanded="true" />
+                <element signature="e#7438#7439#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,7 +106,6 @@
         <option value="$PROJECT_DIR$/LICENCE.md" />
         <option value="$PROJECT_DIR$/run.bat" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java" />
-        <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PatientTable.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PatientListViewer.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" />
@@ -86,6 +116,7 @@
         <option value="$PROJECT_DIR$/src/dwa/adamy/db/DataRow.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/db/Patient.java" />
+        <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" />
       </list>
     </option>
   </component>
@@ -185,13 +216,6 @@
               <item name="osm-project1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="adamy" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="osm-project1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="osm-project1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="adamy" type="462c0819:PsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -274,7 +298,7 @@
       <workItem from="1519988748909" duration="7910000" />
       <workItem from="1520007003169" duration="830000" />
       <workItem from="1520008215409" duration="50000" />
-      <workItem from="1520008354282" duration="3143000" />
+      <workItem from="1520008354282" duration="4034000" />
     </task>
     <task id="LOCAL-00001" summary="PatientEditor: rozpoczęcie">
       <created>1519599230272</created>
@@ -297,14 +321,22 @@
       <option name="project" value="LOCAL" />
       <updated>1519995750282</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Pisanie dokumentacji">
+      <created>1520011529471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1520011529471</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46968000" />
+    <option name="totallyTimeSpent" value="47859000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-28" width="1366" height="769" extended-state="6" />
+    <frame x="0" y="-1" width="1366" height="769" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -316,7 +348,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33074534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19108762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19108762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -375,7 +407,8 @@
     <MESSAGE value="Dodanie wielu rzeczy, bo miałem wene" />
     <MESSAGE value="Dokończenie panelu badań" />
     <MESSAGE value="Dodanie zakresków referencyjnych i pliku README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie zakresków referencyjnych i pliku README.md" />
+    <MESSAGE value="Pisanie dokumentacji" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pisanie dokumentacji" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -497,14 +530,14 @@
           <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1319#1320#0" expanded="false" />
-            <element signature="e#1349#1350#0" expanded="false" />
-            <element signature="e#2688#2689#0" expanded="false" />
-            <element signature="e#2741#2742#0" expanded="false" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#3154#3155#0" expanded="true" />
+            <element signature="e#3207#3208#0" expanded="true" />
             <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
             <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#6959#6960#0" expanded="false" />
-            <element signature="e#7015#7016#0" expanded="false" />
+            <element signature="e#7382#7383#0" expanded="true" />
+            <element signature="e#7438#7439#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -568,14 +601,14 @@
           <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#1319#1320#0" expanded="false" />
-            <element signature="e#1349#1350#0" expanded="false" />
-            <element signature="e#2688#2689#0" expanded="false" />
-            <element signature="e#2741#2742#0" expanded="false" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#3154#3155#0" expanded="true" />
+            <element signature="e#3207#3208#0" expanded="true" />
             <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
             <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#6959#6960#0" expanded="false" />
-            <element signature="e#7015#7016#0" expanded="false" />
+            <element signature="e#7382#7383#0" expanded="true" />
+            <element signature="e#7438#7439#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -707,24 +740,6 @@
           <folding>
             <element signature="e#1897#1898#0" expanded="false" />
             <element signature="e#1955#1956#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1319#1320#0" expanded="false" />
-            <element signature="e#1349#1350#0" expanded="false" />
-            <element signature="e#2688#2689#0" expanded="false" />
-            <element signature="e#2741#2742#0" expanded="false" />
-            <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
-            <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
-            <element signature="e#6959#6960#0" expanded="false" />
-            <element signature="e#7015#7016#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -883,6 +898,45 @@
             <element signature="e#2504#2505#0" expanded="true" />
             <element signature="method#newTestowy#0;class#Patient#0" expanded="false" />
             <element signature="class#Sex#0;class#Patient#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+          <folding>
+            <element signature="method#PropEditor#0;class#PropEditor#0" expanded="false" />
+            <element signature="method#setEnabled#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#IOnEdit#0;class#PropEditor#0" expanded="false" />
+            <element signature="docComment;class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#1689#1690#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#2615#2616#0" expanded="true" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2783#2784#0" expanded="true" />
+            <element signature="e#2852#2853#0" expanded="true" />
+            <element signature="e#2952#2953#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
+            <element signature="e#3154#3155#0" expanded="true" />
+            <element signature="e#3207#3208#0" expanded="true" />
+            <element signature="method#updateWarnLvl#0;class#Text#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#5073#5074#0" expanded="true" />
+            <element signature="e#5152#5153#0" expanded="true" />
+            <element signature="e#5424#5425#0" expanded="true" />
+            <element signature="e#5467#5468#0" expanded="true" />
+            <element signature="e#5506#5507#0" expanded="true" />
+            <element signature="e#5549#5550#0" expanded="true" />
+            <element signature="e#5584#5585#0" expanded="true" />
+            <element signature="e#5628#5629#0" expanded="true" />
+            <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#6623#6624#0" expanded="true" />
+            <element signature="e#6697#6698#0" expanded="true" />
+            <element signature="e#7382#7383#0" expanded="true" />
+            <element signature="e#7438#7439#0" expanded="true" />
           </folding>
         </state>
       </provider>

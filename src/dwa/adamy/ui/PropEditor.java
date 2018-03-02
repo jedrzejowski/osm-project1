@@ -12,6 +12,9 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Abstrakcyjna klasa która tworzy edytory do wartośći
+ */
 public abstract class PropEditor extends JPanel {
 
     private final static Dimension labelDim = new Dimension(100, 25);
@@ -19,7 +22,7 @@ public abstract class PropEditor extends JPanel {
 
     private WarnLvl warnLvl;
 
-    PropEditor(String title) {
+    private PropEditor(String title) {
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
         JLabel label = new JLabel(title);
@@ -41,20 +44,40 @@ public abstract class PropEditor extends JPanel {
             component.setEnabled(b);
     }
 
+    /**
+     * Interfejs do
+     * @param <T>
+     */
     public interface IOnEdit<T> {
         T get();
 
         boolean set(T newValue);
     }
 
+    /**
+     * Interfejs do wyboru z listy
+     * @param <T>
+     */
     public interface IOnSelect<T> extends IOnEdit<T> {
+        /**
+         * Mapa wartości do wyboru
+         * @return mapa wartości
+         */
         Map<T, String> getMap();
     }
 
+    /**
+     * Pobiera poziom ostrzeżenia
+     * @return poziom ostrzeżenia
+     */
     public WarnLvl getWarnLvl() {
         return warnLvl;
     }
 
+    /**
+     * Ustawia poziom ostrzeżenia
+     * @param warnLvl nowy poziom ostrzeżenia
+     */
     public void setWarnLvl(WarnLvl warnLvl) {
         this.warnLvl = warnLvl;
         updateWarnLvl();
@@ -67,7 +90,7 @@ public abstract class PropEditor extends JPanel {
     }
 
 
-    static public class Text extends PropEditor {
+    public static class Text extends PropEditor {
         JTextField field;
         IOnEdit<String> callback;
 
@@ -111,25 +134,23 @@ public abstract class PropEditor extends JPanel {
 
             switch (getWarnLvl()) {
                 case ERROR:
-                    color = new Color(254, 204, 205);
+                    color = COLOR_ERROR;
                     break;
 
                 case WARN:
-                    color = new Color(255, 234, 168);
+                    color = COLOR_WARN;
                     break;
 
                 case GOOD:
-                    color = new Color(188, 245, 188);
+                    color = COLOR_GOOD;
                     break;
             }
 
             field.setBackground(color);
         }
-
-
     }
 
-    static public class Select<T> extends PropEditor {
+    public static class Select<T> extends PropEditor {
         private JComboBox comboBox;
         private IOnSelect<T> callback;
         private Map<T, Item> itemArray;
@@ -198,7 +219,7 @@ public abstract class PropEditor extends JPanel {
         }
     }
 
-    static public class Radio<T> extends PropEditor {
+    public static class Radio<T> extends PropEditor {
         private ButtonGroup group;
         private IOnSelect<T> callback;
         private Map<T, JRadioButton> radioButtons;
@@ -236,7 +257,7 @@ public abstract class PropEditor extends JPanel {
         }
     }
 
-    static public class Date extends PropEditor {
+    public static class Date extends PropEditor {
         JDateChooser calendar;
         IOnEdit<java.util.Date> callback;
 
@@ -259,4 +280,8 @@ public abstract class PropEditor extends JPanel {
             calendar.setDate(callback.get());
         }
     }
+
+    public static final Color COLOR_WARN = new Color(255, 234, 168);
+    public static final Color COLOR_ERROR = new Color(254, 204, 205);
+    public static final Color COLOR_GOOD = new Color(188, 245, 188);
 }
