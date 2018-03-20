@@ -8,9 +8,9 @@ Pierwszy projekt na **O**programowanie **S**ystemów **M**edycznych
 
 ## Autorzy
 
-Adam Jędrzejowski <adam@jedrzejowski> 277417
+Adam Jędrzejowski <adam@jedrzejowski.pl> 277417
 
-Adam Cisak <???@??> 2?????
+Adam Cisak <a.cisak@stud.elka.pw.edu.pl> 277396
 
 ## Linecja
 

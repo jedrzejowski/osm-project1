@@ -4,22 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/dwa/adamy/db/Pesel.java" line="52" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e762b4ee-88ed-455a-91ae-291eccedf49c" name="Default" comment="Dodanie wielu rzeczy">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Database.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Pesel.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/FrameMain.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/FrameMain.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/Log.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/Log.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/Main.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Examination.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/db/Patient.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/db/Patient.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/ExaminationEditor.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/JBorderedPanel.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/JBorderedPanel.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientEditor.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientListViewer.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientListViewer.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientTable.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PatientTable.java" />
-      <change beforePath="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" afterPath="$PROJECT_DIR$/src/dwa/adamy/ui/PropEditor.java" />
+    <list default="true" id="e762b4ee-88ed-455a-91ae-291eccedf49c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,12 +47,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Log.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dwa/adamy/Log.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="180">
+                <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -153,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/JBorderedPanel.java" />
         <option value="$PROJECT_DIR$/LICENCE.md" />
         <option value="$PROJECT_DIR$/run.bat" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/db/DataRow.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/DataRowEditor.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PatientTable.java" />
@@ -168,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/dwa/adamy/ui/PatientListViewer.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/db/Pesel.java" />
         <option value="$PROJECT_DIR$/src/dwa/adamy/Log.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -276,6 +275,11 @@
             <path>
               <item name="osm-project1" type="b2602c69:ProjectViewProjectNode" />
               <item name="osm-project1" type="462c0819:PsiDirectoryNode" />
+              <item name="pic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="osm-project1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="osm-project1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -373,7 +377,7 @@
       <workItem from="1520414113498" duration="6777000" />
       <workItem from="1521108728224" duration="173000" />
       <workItem from="1521466599558" duration="12239000" />
-      <workItem from="1521557679252" duration="61000" />
+      <workItem from="1521557679252" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="PatientEditor: rozpoczęcie">
       <created>1519599230272</created>
@@ -410,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520021356784</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Projekt ukończony">
+      <created>1521557765309</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1521557765309</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67164000" />
+    <option name="totallyTimeSpent" value="67420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -435,9 +446,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21676737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33074534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33074534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20619336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -501,7 +512,8 @@
     <MESSAGE value="Dodanie zakresków referencyjnych i pliku README.md" />
     <MESSAGE value="Pisanie dokumentacji" />
     <MESSAGE value="Dodanie wielu rzeczy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie wielu rzeczy" />
+    <MESSAGE value="Projekt ukończony" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projekt ukończony" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -549,6 +561,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+          <folding>
+            <element signature="method#PropEditor#0;class#PropEditor#0" expanded="false" />
+            <element signature="method#setEnabled#0;class#PropEditor#0" expanded="false" />
+            <element signature="docComment;class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#1692#1693#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#2737#2738#0" expanded="true" />
+            <element signature="e#2805#2806#0" expanded="true" />
+            <element signature="e#2904#2905#0" expanded="true" />
+            <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#3072#3073#0" expanded="true" />
+            <element signature="e#3141#3142#0" expanded="true" />
+            <element signature="e#3322#3323#0" expanded="true" />
+            <element signature="e#3373#3374#0" expanded="true" />
+            <element signature="e#3428#3429#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="method#updateWarnLvl#0;class#Text#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#DigitOnly#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#4410#4655#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="class#Double#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#7608#7641#0" expanded="true" />
+            <element signature="e#8025#8055#1" expanded="true" />
+            <element signature="e#8748#8749#0" expanded="true" />
+            <element signature="e#8827#8828#0" expanded="true" />
+            <element signature="e#9121#9122#0" expanded="true" />
+            <element signature="e#9164#9165#0" expanded="true" />
+            <element signature="e#9196#9197#0" expanded="true" />
+            <element signature="e#9239#9240#0" expanded="true" />
+            <element signature="e#9267#9268#0" expanded="true" />
+            <element signature="e#9311#9312#0" expanded="true" />
+            <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#10318#10319#0" expanded="true" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="class#Date#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#11089#11090#0" expanded="true" />
+            <element signature="e#11145#11146#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,16 +674,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENCE.md" />
     <entry file="file://$PROJECT_DIR$/run.bat" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dwa/adamy/ui/JBorderedPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -664,6 +706,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -688,6 +731,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#2764#2765#0" expanded="true" />
+            <element signature="e#2824#2825#0" expanded="true" />
+            <element signature="e#2875#2876#0" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,6 +744,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="19" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -702,6 +752,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="16" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,6 +781,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="method#PropEditor#0;class#PropEditor#0" expanded="false" />
+            <element signature="method#setEnabled#0;class#PropEditor#0" expanded="false" />
+            <element signature="docComment;class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#IOnSelect#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#1692#1693#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#2737#2738#0" expanded="true" />
+            <element signature="e#2805#2806#0" expanded="true" />
+            <element signature="e#2904#2905#0" expanded="true" />
+            <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#3072#3073#0" expanded="true" />
+            <element signature="e#3141#3142#0" expanded="true" />
+            <element signature="e#3322#3323#0" expanded="true" />
+            <element signature="e#3373#3374#0" expanded="true" />
+            <element signature="e#3428#3429#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="method#updateWarnLvl#0;class#Text#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#DigitOnly#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#4410#4655#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="class#Double#0;class#PropEditor#0" expanded="false" />
+            <element signature="class#Select#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#7608#7641#0" expanded="true" />
+            <element signature="e#8025#8055#1" expanded="true" />
+            <element signature="e#8748#8749#0" expanded="true" />
+            <element signature="e#8827#8828#0" expanded="true" />
+            <element signature="e#9121#9122#0" expanded="true" />
+            <element signature="e#9164#9165#0" expanded="true" />
+            <element signature="e#9196#9197#0" expanded="true" />
+            <element signature="e#9239#9240#0" expanded="true" />
+            <element signature="e#9267#9268#0" expanded="true" />
+            <element signature="e#9311#9312#0" expanded="true" />
+            <element signature="class#Radio#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#10318#10319#0" expanded="true" />
+            <element signature="e#10392#10393#0" expanded="true" />
+            <element signature="class#Date#0;class#PropEditor#0" expanded="false" />
+            <element signature="e#11089#11090#0" expanded="true" />
+            <element signature="e#11145#11146#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -737,6 +828,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
           <caret line="154" column="62" lean-forward="false" selection-start-line="154" selection-start-column="62" selection-end-line="154" selection-end-column="62" />
+          <folding>
+            <element signature="e#2322#2323#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2818#2834#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -744,6 +840,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-142">
           <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -805,6 +902,17 @@
         <state relative-caret-position="45">
           <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
