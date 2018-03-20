@@ -1,6 +1,5 @@
 package dwa.adamy.ui;
 
-import dwa.adamy.Log;
 import dwa.adamy.db.Examination;
 
 import javax.swing.*;
@@ -13,7 +12,7 @@ public class ExaminationEditor extends JBorderedPanel {
     private JButton saveBtn, cancelBtn;
     private Examination examinationOrginal, examinationClone = new Examination();
 
-    private Interface callback;
+    private final Interface callback;
 
     public ExaminationEditor(Interface callback) {
         super("Badanie");
@@ -39,14 +38,14 @@ public class ExaminationEditor extends JBorderedPanel {
             }
         });
 
-        erythrocytesField = new PropEditor.Text("Erytrocyty", new PropEditor.IOnEdit<String>() {
+        erythrocytesField = new PropEditor.Double("Erytrocyty", new PropEditor.IOnEdit<Double>() {
             @Override
-            public String get() {
+            public Double get() {
                 return examinationClone.getErythrocytes();
             }
 
             @Override
-            public boolean set(String newValue) {
+            public boolean set(Double newValue) {
                 examinationClone.setErythrocytes(newValue);
 
                 WarnLvlParse(erythrocytesField, newValue, 4.5, 6, 3, 7.5);
@@ -56,14 +55,14 @@ public class ExaminationEditor extends JBorderedPanel {
             }
         });
 
-        leukocytesField = new PropEditor.Text("Leukocyty", new PropEditor.IOnEdit<String>() {
+        leukocytesField = new PropEditor.Double("Leukocyty", new PropEditor.IOnEdit<Double>() {
             @Override
-            public String get() {
+            public Double get() {
                 return examinationClone.getLeukocytes();
             }
 
             @Override
-            public boolean set(String newValue) {
+            public boolean set(Double newValue) {
                 examinationClone.setLeukocytes(newValue);
 
                 WarnLvlParse(leukocytesField, newValue, 4, 10, 0, 14);
@@ -73,14 +72,14 @@ public class ExaminationEditor extends JBorderedPanel {
             }
         });
 
-        plateletsField = new PropEditor.Text("Płyteki krwi", new PropEditor.IOnEdit<String>() {
+        plateletsField = new PropEditor.Double("Płyteki krwi", new PropEditor.IOnEdit<Double>() {
             @Override
-            public String get() {
+            public Double get() {
                 return examinationClone.getPlatelets();
             }
 
             @Override
-            public boolean set(String newValue) {
+            public boolean set(Double newValue) {
                 examinationClone.setPlatelets(newValue);
 
                 WarnLvlParse(plateletsField, newValue, 130, 300, 0, 400);
@@ -153,22 +152,16 @@ public class ExaminationEditor extends JBorderedPanel {
         cancelBtn.setEnabled(b);
     }
 
-    static void WarnLvlParse(PropEditor editor, String value, double good1, double good2, double warn1, double warn2){
+    private static void WarnLvlParse(PropEditor editor, Double val, double good1, double good2, double warn1, double warn2) {
+        if (editor == null) return;
 
-        if (value.length() > 0) try {
-            double val = Integer.parseInt(value);
-
-            if (good1 < val && val < good2) {
-                editor.setWarnLvl(PropEditor.WarnLvl.GOOD);
-            } else if (warn1 < val && val < warn2) {
-                editor.setWarnLvl(PropEditor.WarnLvl.WARN);
-            } else {
-                editor.setWarnLvl(PropEditor.WarnLvl.ERROR);
-            }
-        } catch (Exception e) {
+        if (good1 < val && val < good2) {
+            editor.setWarnLvl(PropEditor.WarnLvl.GOOD);
+        } else if (warn1 < val && val < warn2) {
+            editor.setWarnLvl(PropEditor.WarnLvl.WARN);
+        } else {
             editor.setWarnLvl(PropEditor.WarnLvl.ERROR);
         }
-        else editor.setWarnLvl(PropEditor.WarnLvl.OK);
     }
 
     public interface Interface {

@@ -13,13 +13,13 @@ import java.util.Date;
 public class Examination {
 
     private Date date;
-    private String erythrocytes, leukocytes, platelets;
+    private Double erythrocytes, leukocytes, platelets;
 
     public Examination(){
         date = null;
-        erythrocytes = "";
-        leukocytes = "";
-        platelets = "";
+        erythrocytes = null;
+        leukocytes = null;
+        platelets = null;
     }
 
     /**
@@ -53,7 +53,7 @@ public class Examination {
      * Pobiera wartość liczby erytrocytów
      * @return liczna erytrocytów
      */
-    public String getErythrocytes() {
+    public Double getErythrocytes() {
         return erythrocytes;
     }
 
@@ -61,7 +61,7 @@ public class Examination {
      * Ustawia wartość liczby erytrocytów
      * @param erythrocytes nowa liczna erytrocytów
      */
-    public void setErythrocytes(String erythrocytes) {
+    public void setErythrocytes(Double erythrocytes) {
         this.erythrocytes = erythrocytes;
     }
 
@@ -69,7 +69,7 @@ public class Examination {
      * Pobiera wartość leukocytów
      * @return wartość leukocytów
      */
-    public String getLeukocytes() {
+    public Double getLeukocytes() {
         return leukocytes;
     }
 
@@ -77,7 +77,7 @@ public class Examination {
      * Ustawia wartość leukocytów
      * @param leukocytes nowa wartość leukocytów
      */
-    public void setLeukocytes(String leukocytes) {
+    public void setLeukocytes(Double leukocytes) {
         this.leukocytes = leukocytes;
     }
 
@@ -85,7 +85,7 @@ public class Examination {
      * Pobiera liczbę płytek krwi
      * @return liczba płytek krwi
      */
-    public String getPlatelets() {
+    public Double getPlatelets() {
         return platelets;
     }
 
@@ -93,7 +93,7 @@ public class Examination {
      * Ustawia liczbę płytek krwi
      * @param platelets nowa liczba płytek krwi
      */
-    public void setPlatelets(String platelets) {
+    public void setPlatelets(Double platelets) {
         this.platelets = platelets;
     }
 

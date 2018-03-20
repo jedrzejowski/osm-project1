@@ -9,7 +9,7 @@ public class Patient {
 
     private String name1 = "";
     private String name2 = "";
-    private String pesel = "";
+    private Pesel pesel = null;
     private Sex sex = Sex.FEMALE;
     private InsuranceType insuranceType = InsuranceType.NONE;
 
@@ -72,7 +72,7 @@ public class Patient {
      * Pobiera pesel pacjenta
      * @return pesel pacjenta
      */
-    public String getPesel() {
+    public Pesel getPesel() {
         return pesel;
     }
 
@@ -80,7 +80,7 @@ public class Patient {
      * Ustawia pesel pacjenta
      * @param pesel pesel pacjenta
      */
-    public void setPesel(String pesel) {
+    public void setPesel(Pesel pesel) {
         this.pesel = pesel;
     }
 
@@ -134,7 +134,7 @@ public class Patient {
         testowy.setName1("Jan" + DebugTestcounter);
         testowy.setName2("Testowy");
         testowy.setSex(Sex.MALE);
-        testowy.setPesel("22222222222");
+        testowy.setPesel(new Pesel("22222222222"));
         return testowy;
     }
 

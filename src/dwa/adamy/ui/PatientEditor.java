@@ -1,10 +1,10 @@
 package dwa.adamy.ui;
 
 import dwa.adamy.db.Patient;
+import dwa.adamy.db.Pesel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.HashMap;
 import java.util.Map;
 
 public class PatientEditor extends JBorderedPanel {
@@ -12,7 +12,7 @@ public class PatientEditor extends JBorderedPanel {
     private PropEditor.Text name1Field, name2Field, peselField;
     private PropEditor.Radio sexField;
     private PropEditor.Select insuranceField;
-    private Interface callback;
+    private final Interface callback;
     private JButton saveBtn, cancelBtn;
 
     private Patient patientOrginal, patientClone = new Patient();
@@ -57,15 +57,21 @@ public class PatientEditor extends JBorderedPanel {
             }
         });
 
-        peselField = new PropEditor.Text("Pesel:", new PropEditor.IOnEdit<String>() {
+        peselField = new PropEditor.DigitOnly("Pesel:", new PropEditor.IOnEdit<String>() {
             @Override
             public String get() {
-                return patientClone.getPesel();
+                return patientClone.getPesel() == null ? "" : patientClone.getPesel().toString();
             }
 
             @Override
             public boolean set(String newValue) {
-                patientClone.setPesel(newValue);
+                Pesel pesel = new Pesel(newValue);
+
+                peselField.setWarnLvl(pesel.isValid() || newValue.length() == 0 ?
+                        PropEditor.WarnLvl.OK : PropEditor.WarnLvl.ERROR);
+
+                patientClone.setPesel(pesel);
+
                 setSpecialMark(true);
                 return true;
             }
@@ -125,6 +131,8 @@ public class PatientEditor extends JBorderedPanel {
 
         saveBtn = new JButton("Zapisz");
         saveBtn.addActionListener(actionEvent -> {
+
+
             patientOrginal = new Patient(patientClone);
             setSpecialMark(false);
             callback.onSave(patientOrginal);

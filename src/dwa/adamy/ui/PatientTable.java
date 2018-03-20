@@ -1,38 +1,29 @@
 package dwa.adamy.ui;
 
 import dwa.adamy.db.DataRow;
+import dwa.adamy.db.Database;
 import dwa.adamy.db.Patient;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class PatientTable extends JTable {
-    private PatientTableModel model;
-    private ArrayList<DataRow> list;
-    private ListSelectionModel cellSelectionModel;
+    private final PatientTableModel model;
+    private final Database database;
 
-    public PatientTable() {
+    public PatientTable(Database database) {
         super();
-
-        list = new ArrayList<>();
+        this.database = database;
 
         model = new PatientTableModel();
-        model.setList(list);
+
         setModel(model);
 
         setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 
     public void addDataRow(DataRow dataRow) {
-        list.add(dataRow);
-        fireTableDataChanged(false);
-    }
-
-    public void removeDataRow(DataRow dataRow) {
-        list.remove(dataRow);
+        database.add(dataRow);
         fireTableDataChanged(false);
     }
 
@@ -51,32 +42,18 @@ public class PatientTable extends JTable {
 
         if (i < 0) return null;
 
-        return list.get(i);
+        return database.get(i);
     }
 
-    public ArrayList<DataRow> getList() {
-        return list;
-    }
+    private class PatientTableModel extends AbstractTableModel {
 
-    private static class PatientTableModel extends AbstractTableModel {
-
-        final static String[] ColumnNames = {
+        final String[] ColumnNames = {
                 "Imię i Nazwisko",
                 "Płęć",
                 "PESEL",
                 "Ubezpieczenie",
                 "Badanie"
         };
-
-        List<DataRow> list;
-
-        public List<DataRow> getList() {
-            return list;
-        }
-
-        private void setList(List<DataRow> list) {
-            this.list = list;
-        }
 
         @Override
         public String getColumnName(int i) {
@@ -85,7 +62,7 @@ public class PatientTable extends JTable {
 
         @Override
         public int getRowCount() {
-            return list.size();
+            return database.size();
         }
 
         @Override
@@ -95,7 +72,7 @@ public class PatientTable extends JTable {
 
         @Override
         public Object getValueAt(int row, int col) {
-            DataRow dataRow = list.get(row);
+            DataRow dataRow = database.get(row);
 
             switch (col) {
                 case 0:

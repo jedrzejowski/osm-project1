@@ -1,17 +1,16 @@
 package dwa.adamy;
 
 import dwa.adamy.db.DataRow;
-import dwa.adamy.db.Patient;
+import dwa.adamy.db.Database;
 import dwa.adamy.ui.DataRowEditor;
 import dwa.adamy.ui.PatientListViewer;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Klasa zawierająca logikę oddziaływania pomiędzy pomiędzy dwoma panelami
+ *
  * @see dwa.adamy.ui.DataRowEditor panel edycji pojedyńczego wiersza
  * @see dwa.adamy.ui.PatientListViewer panel trzymający wszsytkie wiersze
  */
@@ -19,25 +18,28 @@ public class FrameMain extends JFrame implements PatientListViewer.Interface, Da
 
     private DataRowEditor dataRowEditor;
     private PatientListViewer patientListViewer;
+    private final Database database;
 
-    public FrameMain() {
+    public FrameMain(Database database) {
 
         setTitle("Rejestracja wyników badań");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
 
+        this.database = database;
+
         initMenuBar();
-        initCompoments();
+        initComponents();
     }
 
     /**
      * Inicjuje komponenty, czyli prawy panel listy i lewy panel edycji
      */
-    private void initCompoments() {
+    private void initComponents() {
         dataRowEditor = new DataRowEditor(this);
         add(dataRowEditor, BorderLayout.LINE_START);
 
-        patientListViewer = new PatientListViewer(this);
+        patientListViewer = new PatientListViewer(database, this);
         add(patientListViewer, BorderLayout.CENTER);
     }
 
@@ -70,7 +72,8 @@ public class FrameMain extends JFrame implements PatientListViewer.Interface, Da
     @Override
     public void onRemoveBtn(DataRow dataRow) {
         if (dataRow == null) return;
-        patientListViewer.removeDataRow(dataRow);
+        database.remove(dataRow);
+        patientListViewer.fireTableDataChanged(false);
         dataRowEditor.setEnabled(false);
     }
 
@@ -87,20 +90,17 @@ public class FrameMain extends JFrame implements PatientListViewer.Interface, Da
     @Override
     public boolean onCreatePatient(DataRow newDataRow) {
 
-        for (DataRow dataRow : patientListViewer.getList()) {
-            if (dataRow.getPatient().getPesel().equals(newDataRow.getPatient().getPesel())){
+        boolean added = database.add(newDataRow);
 
-                JOptionPane.showMessageDialog(this,
-                        "Istnieje już pacjent o takim peselu",
-                        "Uwaga !!!",
-                        JOptionPane.ERROR_MESSAGE);
+        if (!added) JOptionPane.showMessageDialog(this,
+                    "Istnieje już pacjent o takim peselu",
+                    "Uwaga !!!",
+                    JOptionPane.ERROR_MESSAGE);
 
-                return false;
-            }
-        }
+        patientListViewer.fireTableDataChanged(false);
+        patientListViewer.setEnabled(true);
 
-        patientListViewer.addDataRow(newDataRow);
-        return true;
+        return added;
     }
 
     @Override

@@ -11,10 +11,8 @@ public class DataRowEditor extends JPanel {
 
     private PatientEditor patientEditor;
     private ExaminationEditor examinationEditor;
-    private Interface callback;
-
+    private final Interface callback;
     private State state;
-
     private DataRow dataRow;
 
     public DataRowEditor(Interface callback) {
@@ -22,11 +20,11 @@ public class DataRowEditor extends JPanel {
         this.callback = callback;
         state = State.WAIT;
 
-        initCompoments();
+        initComponent();
         setEnabled(false);
     }
 
-    private void initCompoments() {
+    private void initComponent() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         patientEditor = new PatientEditor(new PatientEditor.Interface() {
@@ -38,8 +36,8 @@ public class DataRowEditor extends JPanel {
                     case CREATING:
                         boolean good = callback.onCreatePatient(dataRow);
                         if (good) setEnabled(false);
-
                         break;
+
                     case EDITING:
                         callback.onSaveDataRow(dataRow);
                         break;
@@ -109,9 +107,7 @@ public class DataRowEditor extends JPanel {
 
         if (!b) {
             state = State.WAIT;
-            patientEditor.setEnabled(false);
             patientEditor.setPatient(null);
-            examinationEditor.setEnabled(false);
             examinationEditor.setExamination(null);
         }
     }
@@ -124,7 +120,7 @@ public class DataRowEditor extends JPanel {
         void onCancelDataRow();
     }
 
-    private enum State {
+    protected enum State {
         WAIT, CREATING, EDITING
     }
 }

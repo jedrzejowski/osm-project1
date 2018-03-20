@@ -2,21 +2,21 @@ package dwa.adamy.ui;
 
 import dwa.adamy.Log;
 import dwa.adamy.db.DataRow;
+import dwa.adamy.db.Database;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class PatientListViewer extends JPanel {
 
-    JButton addBtn, rmBtn;
-    PatientTable table;
-    Interface callback;
+    private JButton addBtn, rmBtn;
+    private PatientTable table;
+    private final Interface callback;
+    private final Database database;
 
-    public PatientListViewer(Interface callback) {
+    public PatientListViewer(Database database, Interface callback) {
         super();
+        this.database = database;
         this.callback = callback;
 
         initComponents();
@@ -27,18 +27,15 @@ public class PatientListViewer extends JPanel {
 
         setLayout(new BorderLayout());
 
-        table = new PatientTable();
-        table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent listSelectionEvent) {
+        table = new PatientTable(database);
+        table.getSelectionModel().addListSelectionListener(listSelectionEvent -> {
 
-                // To jest poto aby nie było podwujnego eventu
-                //https://stackoverflow.com/questions/5865343/why-does-jtable-always-trigger-listselectionlistener-twice
-                //https://stackoverflow.com/questions/10860419/what-exactly-does-getvalueisadjusting-do
-                if (listSelectionEvent.getValueIsAdjusting()) return;
+            // To jest poto aby nie było podwujnego eventu
+            //https://stackoverflow.com/questions/5865343/why-does-jtable-always-trigger-listselectionlistener-twice
+            //https://stackoverflow.com/questions/10860419/what-exactly-does-getvalueisadjusting-do
+            if (listSelectionEvent.getValueIsAdjusting()) return;
 
-                callback.onSelect(table.getSelectedDataRow());
-            }
+            callback.onSelect(table.getSelectedDataRow());
         });
 
 
@@ -68,9 +65,7 @@ public class PatientListViewer extends JPanel {
 
         if (Log.isDEBUG) {
             JButton addTest = new JButton("Dodaj test");
-            addTest.addActionListener(actionEvent -> {
-                table.addDataRow(DataRow.newTestowy());
-            });
+            addTest.addActionListener(actionEvent -> table.addDataRow(DataRow.newTestowy()));
             bottomBox.add(addTest);
         }
 
@@ -85,10 +80,6 @@ public class PatientListViewer extends JPanel {
         setEnabled(true);
     }
 
-    public void removeDataRow(DataRow dataRow){
-        table.removeDataRow(dataRow);
-    }
-
     public void fireTableDataChanged(boolean saveSeletion){
         table.fireTableDataChanged(saveSeletion);
     }
@@ -100,10 +91,6 @@ public class PatientListViewer extends JPanel {
         table.setEnabled(b);
         addBtn.setEnabled(b);
         rmBtn.setEnabled(b);
-    }
-
-    public ArrayList<DataRow> getList() {
-        return table.getList();
     }
 
     public interface Interface {

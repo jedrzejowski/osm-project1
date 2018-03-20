@@ -1,13 +1,11 @@
 package dwa.adamy.ui;
 
-import dwa.adamy.Log;
-
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
 public class JBorderedPanel extends JPanel {
     private String title;
-    private TitledBorder border;
+    private final TitledBorder border;
     private boolean specialMark = false;
 
     public JBorderedPanel(String title) {

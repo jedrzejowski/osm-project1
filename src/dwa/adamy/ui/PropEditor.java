@@ -1,14 +1,13 @@
 package dwa.adamy.ui;
 
 import com.toedter.calendar.JDateChooser;
-import dwa.adamy.Log;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,6 +45,7 @@ public abstract class PropEditor extends JPanel {
 
     /**
      * Interfejs do
+     *
      * @param <T>
      */
     public interface IOnEdit<T> {
@@ -56,11 +56,13 @@ public abstract class PropEditor extends JPanel {
 
     /**
      * Interfejs do wyboru z listy
+     *
      * @param <T>
      */
     public interface IOnSelect<T> extends IOnEdit<T> {
         /**
          * Mapa wartości do wyboru
+         *
          * @return mapa wartości
          */
         Map<T, String> getMap();
@@ -68,6 +70,7 @@ public abstract class PropEditor extends JPanel {
 
     /**
      * Pobiera poziom ostrzeżenia
+     *
      * @return poziom ostrzeżenia
      */
     public WarnLvl getWarnLvl() {
@@ -76,6 +79,7 @@ public abstract class PropEditor extends JPanel {
 
     /**
      * Ustawia poziom ostrzeżenia
+     *
      * @param warnLvl nowy poziom ostrzeżenia
      */
     public void setWarnLvl(WarnLvl warnLvl) {
@@ -83,7 +87,8 @@ public abstract class PropEditor extends JPanel {
         updateWarnLvl();
     }
 
-    protected void updateWarnLvl() { }
+    protected void updateWarnLvl() {
+    }
 
     public enum WarnLvl {
         OK, GOOD, WARN, ERROR
@@ -91,26 +96,26 @@ public abstract class PropEditor extends JPanel {
 
 
     public static class Text extends PropEditor {
-        JTextField field;
-        IOnEdit<String> callback;
+        protected final JFormattedTextField field;
+        protected final IOnEdit<String> callback;
 
-        public Text(String title, IOnEdit<String> callback) {
+        public Text(String title, IOnEdit<String> callback, JFormattedTextField.AbstractFormatter formatter) {
             super(title);
             this.callback = callback;
 
-            field = new JTextField();
+            field = new JFormattedTextField(formatter);
             field.setPreferredSize(fieldDim);
             field.setMinimumSize(fieldDim);
             field.setMaximumSize(fieldDim);
             field.getDocument().addDocumentListener(new DocumentListener() {
                 @Override
                 public void insertUpdate(DocumentEvent documentEvent) {
-                    callback.set(field.getText());
+                    changedUpdate(documentEvent);
                 }
 
                 @Override
                 public void removeUpdate(DocumentEvent documentEvent) {
-                    callback.set(field.getText());
+                    changedUpdate(documentEvent);
                 }
 
                 @Override
@@ -118,9 +123,16 @@ public abstract class PropEditor extends JPanel {
                     callback.set(field.getText());
                 }
             });
+
+            //field.addKeyListener();
+
             add(field);
 
             refreshData();
+        }
+
+        public Text(String title, IOnEdit<String> callback) {
+            this(title, callback, null);
         }
 
         @Override
@@ -148,27 +160,133 @@ public abstract class PropEditor extends JPanel {
 
             field.setBackground(color);
         }
+
+        private int maxLength = -1;
+
+        public int getMaxLength() {
+            return maxLength;
+        }
+
+        public void setMaxLength(int maxLength) {
+            this.maxLength = maxLength;
+        }
+    }
+
+    public static class DigitOnly extends Text {
+
+        public DigitOnly(String title, IOnEdit<String> callback) {
+            super(title, callback);
+
+            field.addKeyListener(new KeyAdapter() {
+
+                @Override
+                public void keyTyped(KeyEvent e) {
+                    if (!e.isActionKey() && !Character.isDigit(e.getKeyChar()))
+                        e.consume();
+                }
+            });
+        }
+    }
+
+    public static class Double extends Text {
+
+        public Double(String title, IOnEdit<java.lang.Double> callback) {
+            super(title, new IOnEdit<String>() {
+                @Override
+                public String get() {
+                    java.lang.Double d = callback.get();
+                    return d == null ? "" : d.toString();
+                }
+
+                @Override
+                public boolean set(String newValue) {
+                    if (newValue.equals(""))
+                        return callback.set(0d);
+
+                    java.lang.Double f = java.lang.Double.parseDouble(newValue);
+                    return callback.set(f);
+                }
+            });
+
+            field.addKeyListener(new KeyAdapter() {
+
+                @Override
+                public void keyPressed(KeyEvent event) {
+
+                    if (event.isActionKey()) {
+                        double inc = 1;
+                        if (event.isShiftDown()) inc = 0.1d;
+
+                        switch (event.getKeyCode()) {
+                            case 38: // up arrow
+                                field.setText((callback.get() + inc) + "");
+                                break;
+
+                            case 40: // down arrow
+                                field.setText((callback.get() - inc) + "");
+                                break;
+                        }
+                    }
+
+                    super.keyPressed(event);
+                }
+
+                @Override
+                public void keyTyped(KeyEvent event) {
+
+                    char c = event.getKeyChar();
+
+                    if (!Character.isDigit(c)) {
+
+                        if (c == ',') event.setKeyChar(c = '.');
+
+                        if (c != '-' && c != '.') {
+                            event.consume();
+                            return;
+                        }
+                    }
+
+                    try {
+                        String val = field.getText(), first = "", second = "";
+                        int length = val.length();
+
+                        if (length > 0) {
+                            int start = field.getSelectionStart();
+                            int end = field.getSelectionEnd();
+
+                            first = start == 0 ? "" : val.substring(0, start - 1);
+                            second = end == length ? "" : val.substring(end, length - 1);
+                        }
+
+                        double d = java.lang.Double.parseDouble(first + c + second);
+                    } catch (Exception err) {
+                        event.consume();
+                    }
+
+                    super.keyTyped(event);
+                }
+            });
+        }
     }
 
     public static class Select<T> extends PropEditor {
-        private JComboBox comboBox;
-        private IOnSelect<T> callback;
+        private final JComboBox<Item> comboBox;
+        private final IOnSelect<T> callback;
         private Map<T, Item> itemArray;
 
+        @SuppressWarnings("WeakerAccess")
         public Select(String title, IOnSelect<T> callback) {
             super(title);
             this.callback = callback;
 
-            comboBox = new JComboBox();
+            comboBox = new JComboBox<>();
             comboBox.setPreferredSize(fieldDim);
             comboBox.setMinimumSize(fieldDim);
             comboBox.setMaximumSize(fieldDim);
-            comboBox.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent actionEvent) {
-                    Item item = (Item) comboBox.getSelectedItem();
-                    callback.set(item.getValue());
-                }
+            comboBox.addActionListener(actionEvent -> {
+                @SuppressWarnings("unchecked")
+                Item item = (Item) comboBox.getSelectedItem();
+                if (item != null) callback.set(item.getValue());
             });
 
             refreshButtonsDef();
@@ -195,9 +313,9 @@ public abstract class PropEditor extends JPanel {
             comboBox.setSelectedItem(itemArray.get(callback.get()));
         }
 
-        class Item {
-            private String text;
-            private T value;
+        protected class Item {
+            private final String text;
+            private final T value;
 
             Item(T value, String text) {
                 this.text = text;
@@ -209,19 +327,19 @@ public abstract class PropEditor extends JPanel {
                 return text;
             }
 
-            public String getText() {
+            String getText() {
                 return text;
             }
 
-            public T getValue() {
+            T getValue() {
                 return value;
             }
         }
     }
 
     public static class Radio<T> extends PropEditor {
-        private ButtonGroup group;
-        private IOnSelect<T> callback;
+        private final ButtonGroup group;
+        private final IOnSelect<T> callback;
         private Map<T, JRadioButton> radioButtons;
 
         public Radio(String title, IOnSelect<T> callback) {
@@ -258,8 +376,8 @@ public abstract class PropEditor extends JPanel {
     }
 
     public static class Date extends PropEditor {
-        JDateChooser calendar;
-        IOnEdit<java.util.Date> callback;
+        final JDateChooser calendar;
+        final IOnEdit<java.util.Date> callback;
 
         public Date(String title, IOnEdit<java.util.Date> callback) {
             super(title);

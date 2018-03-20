@@ -1,7 +1,7 @@
 package dwa.adamy;
 
 public class Log {
-    public static final boolean isDEBUG = true;
+    public static final boolean isDEBUG = false;
 
     /**
      * Podaje na standardowe wyjście parametr x
